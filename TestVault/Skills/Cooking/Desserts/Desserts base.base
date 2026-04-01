@@ -1,0 +1,7 @@
+views:
+  - type: cards
+    name: View
+    filters:
+      and:
+        - file.inFolder("Skills/Cooking/Desserts") && file.ext == "md"
+    image: note.cover

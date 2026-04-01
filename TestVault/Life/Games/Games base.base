@@ -1,0 +1,13 @@
+views:
+  - type: cards
+    name: Cards
+    filters:
+      and:
+        - |-
+          file.inFolder(this.file.folder) &&
+          file.folder == this.file.folder &&
+          !file.path.endsWith(".base") &&
+          file.basename != this.file.folder.split("/")[this.file.folder.split("/").length - 1]
+    image: note.image
+    imageAspectRatio: 0.65
+    cardSize: 210

@@ -1,0 +1,20 @@
+formulas:
+  Untitled: ""
+views:
+  - type: cards
+    name: Cards
+    filters:
+      and:
+        - |
+          file.inFolder(this.file.folder)
+          && file.basename == file.folder.split("/")[file.folder.split("/").length - 1]
+          && file.folder != this.file.folder
+          && file.folder.split("/").length == this.file.folder.split("/").length + 1
+          && started
+          && read == false
+    order:
+      - file.name
+    sort: []
+    image: note.cover
+    columnSize:
+      file.name: 148

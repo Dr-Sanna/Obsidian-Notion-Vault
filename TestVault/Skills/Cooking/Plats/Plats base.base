@@ -1,0 +1,32 @@
+views:
+  - type: cards
+    name: View
+    filters:
+      and:
+        - file.inFolder("Skills/Cooking/Plats") && file.ext == "md"
+    image: note.cover
+    rowsMultiMode: disallow
+    colsMultiMode: disallow
+    includeEmpty: true
+    cellMode: cards
+    maxCardsPerCell: 6
+    enableDrag: true
+    showCountChip: true
+    enableHoverPreview: true
+    cellSortBy: ""
+    cellSortDir: asc
+    cellSummaryMode: count
+    cellSummaryField: ""
+    cardFields: ""
+    compactFields: ""
+    compactMaxFields: 2
+    cardThumbMode: off
+    cardThumbField: cover
+    cardThumbSize: sm
+    allowRemoteThumbs: false
+    heatmapMode: off
+    heatmapStrength: 35
+    heatmapScale: linear
+    createNoteTemplatePath: ""
+    lastCreateNoteFolder: ""
+    lastCreateNoteTemplatePath: ""
