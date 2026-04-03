@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1767744178237,
+      "items": [
+        {
+          "type": "group",
+          "ctime": 1768816838834,
+          "items": [
+            {
+              "type": "group",
+              "ctime": 1768817125991,
+              "items": [],
+              "title": "DailyNotes"
+            },
+            {
+              "type": "group",
+              "ctime": 1768817129761,
+              "items": [],
+              "title": "WeeklyNotes"
+            },
+            {
+              "type": "group",
+              "ctime": 1768817135709,
+              "items": [],
+              "title": "Liste d'achats"
+            },
+            {
+              "type": "group",
+              "ctime": 1768817135709,
+              "items": [],
+              "title": "Liste d'achats"
+            }
+          ],
+          "title": "Notes"
+        },
+        {
+          "type": "group",
+          "ctime": 1768816832792,
+          "items": [],
+          "title": "Life"
+        },
+        {
+          "type": "group",
+          "ctime": 1768816849152,
+          "items": [],
+          "title": "Skills"
+        },
+        {
+          "type": "group",
+          "ctime": 1768816844730,
+          "items": [],
+          "title": "Obsidian"
+        }
+      ],
+      "title": "sortspec"
+    }
+  ]
+}

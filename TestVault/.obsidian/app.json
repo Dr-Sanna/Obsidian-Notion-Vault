@@ -1,0 +1,19 @@
+{
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "strictLineBreaks": true,
+  "alwaysUpdateLinks": true,
+  "readableLineLength": true,
+  "autoPairMarkdown": true,
+  "autoPairBrackets": true,
+  "promptDelete": false,
+  "showUnsupportedFiles": true,
+  "openBehavior": "file:Homepage",
+  "defaultViewMode": "preview",
+  "showIndentGuide": true,
+  "newLinkFormat": "shortest"
+}

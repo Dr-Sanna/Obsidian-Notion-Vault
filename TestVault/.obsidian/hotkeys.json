@@ -1,0 +1,11 @@
+{
+  "editor:open-link-in-new-split": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Enter"
+    }
+  ],
+  "editor:follow-link": []
+}

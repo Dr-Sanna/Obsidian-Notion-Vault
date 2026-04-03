@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "887e131ac4040b10",
+    "type": "split",
+    "children": [
+      {
+        "id": "99bb72c344013239",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7f509f4404e155c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Homepage.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Homepage"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "32edb5cfdf2a276d",
+    "type": "split",
+    "children": [
+      {
+        "id": "d970919bdfac35db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "76d57d121c4065e2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "69c1628bf327a105",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Work/Work.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Plan de Work"
+            }
+          },
+          {
+            "id": "f4d3c0d8c1e283c2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Signets"
+            }
+          },
+          {
+            "id": "91b6e59fca65a112",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Mots-clés"
+            }
+          },
+          {
+            "id": "cac8a99865f6fee8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Rechercher"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 277.5
+  },
+  "right": {
+    "id": "cc9daa1fc5185af8",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b2bc783f11774e1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4d4ebd2b26bc6d18",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "Work/Dentaire/Inlay Onlay Overlay/5 - Évolution des formes de préparation pour inlays et onlays postérieurs au maxillaire.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Notes de bas de page"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "workspaces:Manage workspace layouts": false,
+      "bases:Create new base": false,
+      "copilot:Open Copilot Chat": false,
+      "obsidian-book-search-plugin:Create new book note": false,
+      "obsidian42-brat:BRAT": false,
+      "obsidian-kanban:Create new board": false,
+      "obsidian-media-db-plugin:Add new Media DB entry": false,
+      "templater-obsidian:Templater": false,
+      "periodic-notes:Open today": false
+    }
+  },
+  "active": "a7f509f4404e155c",
+  "lastOpenFiles": [
+    "Work/Docs/Biomatériaux/Biomatériaux.md",
+    "Work/Docs/Biomatériaux/Some file.md",
+    "Work/Docs/Docs.md",
+    "Homepage.md",
+    "Life/Cinema/Cinema.md",
+    "Notes/WeeklyNotes/WeeklyNotes.md",
+    "Notes/Thoughts/Thoughts.md",
+    "Notes/Shopping list/Shopping list.md",
+    "Notes/MonthlyNotes/MonthlyNotes.md",
+    "Notes/DailyNotes/DailyNotes.md",
+    "Work/Work.md",
+    "Work/Docs/Histologie/Histologie.md",
+    "Work/Docs/MOCO/MOCO.md",
+    "Work/Docs/Parodontologie/Parodontologie.md",
+    "Some cool features.md",
+    "Pasted image 20260401190348.png",
+    "Pasted image 20260401190148.png",
+    "Image placeholder.png",
+    "Work/Docs/Risques médicaux/Risques médicaux.md",
+    "Work/Docs/Restauration/Restauration.md",
+    "Obsidian/Templates/WeekTracker.md",
+    "Obsidian/Templates/TOC.md",
+    "Obsidian/Templates/New Weekly template.md",
+    "Obsidian/Templates/New Monthly template.md",
+    "Obsidian/Templates/New Folder Note template.md",
+    "Obsidian/Templates/New Daily template.md",
+    "Obsidian/Templates/Dataview Notion notes.md",
+    "Obsidian/Templates/Dataview Notion foldernotes.md",
+    "Life/Games/Games.md",
+    "Life/Cinema/Cinéma base.base",
+    "Skills/Cooking/Desserts/Desserts base.base",
+    "Life/Library/En cours base.base",
+    "Life/Library/Bibliothèque base.base",
+    "Life/Library/GTO Paradise Lost/GTO Paradise Lost T01.jpg",
+    "Obsidian/attachments/banners/snowtree.gif",
+    "Obsidian/attachments/flashcards.jpg",
+    "Obsidian/attachments/icons/calendar-today.svg",
+    "Obsidian/attachments/banners/retro consoles.jpg",
+    "Obsidian/attachments/banners/rainy-day-bird-2.gif",
+    "Obsidian/attachments/banners/rainy-day-bird.gif",
+    "Notes/tqa.config.json",
+    "Notes/Objectifs.json",
+    "Skills/Cooking/Plats/Plats base.base",
+    "Work/Docs/Restauration/Restaurer la dent dépulpée, tout simplement/restaurer-la-dent-depulpee-tout-simplement_compress.pdf",
+    "Work/Docs/Parodontologie",
+    "Obsidian/Scripts/figure_exporter_pyside6_v27_batch_suffix.py",
+    "Work/Dentaire/Histologie de l'émail/Figures/Figure 40.canvas",
+    "Sport/Muscu Ultime/4 séances.canvas",
+    "Thèse/Odontocases/2 QR & Quiz/QR (CNECO)/Sans titre.canvas",
+    "Items CNECO/Sans titre.canvas"
+  ]
+}
