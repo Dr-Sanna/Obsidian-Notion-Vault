@@ -1,0 +1,10 @@
+{
+  "id": "html-table-wysiwyg",
+  "name": "HTML Table WYSIWYG",
+  "version": "0.2.8",
+  "minAppVersion": "1.4.0",
+  "description": "Edit HTML <table> blocks in a WYSIWYG grid with def-table styling, paragraph-aware cell editing, inline formatting, drag-to-resize columns, and row/column merge-split tools.",
+  "author": "DrSanna",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}

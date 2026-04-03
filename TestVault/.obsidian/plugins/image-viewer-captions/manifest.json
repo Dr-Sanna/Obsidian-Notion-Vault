@@ -1,0 +1,9 @@
+{
+  "id": "image-viewer-captions",
+  "name": "Image Viewer Captions",
+  "version": "1.7.9",
+  "minAppVersion": "1.5.0",
+  "description": "Add captions and stored aliases to images from Obsidian's image view, preview them live, optionally display captions under transcluded images, and copy styled wikilinks with alias helpers.",
+  "author": "DrSanna",
+  "isDesktopOnly": false
+}

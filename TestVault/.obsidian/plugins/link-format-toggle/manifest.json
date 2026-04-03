@@ -1,0 +1,9 @@
+{
+  "id": "link-format-toggle",
+  "name": "Link Format Toggle",
+  "version": "0.2.0",
+  "minAppVersion": "1.5.0",
+  "description": "Toggle le format des nouveaux liens internes entre chemin court et chemin absolu, avec icône dynamique dans l’en-tête de page.",
+  "author": "DrSanna",
+  "isDesktopOnly": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "notion-page-icons-sync",
+  "name": "Notion Page Icons Sync",
+  "version": "0.0.38",
+  "minAppVersion": "1.5.0",
+  "description": "Uses a frontmatter icon field to render consistent icons in file explorer, note titles, and wikilinks, with offline emoji and Lucide icon picker.",
+  "author": "DrSanna",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}

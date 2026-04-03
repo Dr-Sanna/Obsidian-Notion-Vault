@@ -1,0 +1,30 @@
+{
+  "highlighterStyle": "realistic",
+  "highlighterMethods": "css-classes",
+  "highlighters": {
+    "Red": "#FF5582A6",
+    "Orange": "#FFB86CA6",
+    "Blue": "#ADCCFFA6",
+    "Purple": "#D2B3FFA6",
+    "Grey": "#CACFD9A6",
+    "Vert": "#d3f8b6",
+    "Jaune": "#ffd00066",
+    "Bleu": "#ADCCFFA6",
+    "Gris": "#CACFD9A6",
+    "Rouge": "#FF5582A6",
+    "Violet": "#D2B3FFA6"
+  },
+  "highlighterOrder": [
+    "Jaune",
+    "Orange",
+    "Bleu",
+    "Vert",
+    "Gris",
+    "Violet",
+    "Rouge",
+    "Red",
+    "Grey",
+    "Purple",
+    "Blue"
+  ]
+}

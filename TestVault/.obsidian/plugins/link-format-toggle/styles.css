@@ -1,0 +1,12 @@
+.link-format-toggle-header {
+  transition: color 140ms ease, opacity 140ms ease, transform 140ms ease;
+}
+
+.link-format-toggle-header.mod-link-format-absolute {
+  color: var(--interactive-accent);
+  opacity: 1;
+}
+
+.link-format-toggle-header.mod-link-format-short {
+  opacity: 0.85;
+}

@@ -1,0 +1,18 @@
+{
+  "defaultShowInEmbeds": true,
+  "viewerPanelPosition": "right",
+  "showCaptionsInLivePreview": true,
+  "defaultCopyAsTransclusion": true,
+  "defaultCopyIncludeAlias": false,
+  "defaultCopyAsBold": false,
+  "defaultCopyWrapAliasInParentheses": false,
+  "images": {
+    "Image placeholder.png": {
+      "caption": "I'm a caption",
+      "showInEmbeds": true,
+      "alias": "Figure 1.",
+      "prefixEnabled": true,
+      "prefixText": "Figure 1."
+    }
+  }
+}
