@@ -1,9 +1,0 @@
-.obsidian-banner-wrapper {
-    margin-top: calc(var(--banner-height) - 100px);
-    padding-top: .5em;
-}
-
-.obsidian-banner {
-height: 30vh !important;
-}
-
