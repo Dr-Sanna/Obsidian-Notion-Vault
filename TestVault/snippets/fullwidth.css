@@ -1,0 +1,28 @@
+/* ================= FULLWIDTH (cssclass/cssclasses: fullwidth) ================= */
+
+/* Reading view */
+.markdown-preview-view.fullwidth.is-readable-line-width > .markdown-preview-section {
+  width: 90% !important;
+  max-width: 90% !important;
+}
+
+
+
+/* Variables de largeur (cas leaf / view-content / markdown-view / source-view) */
+
+
+.markdown-source-view.fullwidth,
+.view-content.fullwidth{
+  --file-line-width: 90%;
+
+}
+
+div.cm-contentContainer  {
+width: 100%;
+--file-line-width: 100%;}
+
+.markdown-preview-view .markdown-embed-content .markdown-preview-sizer{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+}

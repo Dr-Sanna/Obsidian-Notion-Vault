@@ -1,0 +1,45 @@
+/* =======================
+   DATACARDS : carte entière cliquable (uniquement pages .clickable-datacards)
+   ======================= */
+
+.clickable-datacards .datacards-card{
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative !important;
+}
+
+.clickable-datacards .datacards-file-property{
+  margin-bottom: 0px;
+}
+
+.clickable-datacards .datacards-card:hover{
+  transform: none;
+  box-shadow: var(--ifm-global-shadow-lw);
+  background: var(--background-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clickable-datacards .datacards-card a.datacards-file-link{
+  position: static !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.clickable-datacards .datacards-card a.datacards-file-link::after{
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 10 !important;
+  cursor: pointer !important;
+}
+/* Désactive l’overlay sur la page flashcards */
+.flashcards-dashboard .datacards-card a.datacards-file-link::after{
+  content: none !important;
+}

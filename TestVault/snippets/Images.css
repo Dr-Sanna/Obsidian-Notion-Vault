@@ -1,0 +1,214 @@
+/* --- PARAMÈTRES GLOBAUX --- */
+:root {
+  --img-float-width-sm: 33.333%;
+  --img-float-width-md: 50%;
+  --img-float-width-lg: 66.666%;
+
+  --img-vertical-margin-top: 0.0em;
+  --img-vertical-margin-bottom: 0.0em;
+  --img-float-margin-bottom: 0.6em;
+}
+
+figcaption {
+  font-size: 0.80em !important;
+  color: var(--text-muted) !important;
+  line-height: 1.8 !important;
+text-align: left !important;
+margin-top: 0.5em !important;
+padding-top: 0 !important;
+margin-bottom: 0 !important;
+padding-bottom: 0 !important;
+}
+
+/* --- ESPACEMENT VERTICAL AUTOUR DES IMAGES --- */
+
+/* Mode édition : images normales */
+.markdown-source-view.mod-cm6 .cm-content img[src]:not(.cm-widgetBuffer):not(.cm-iconize-icon):not(.banner-image):not(.datacards-image) {
+  margin-top: var(--img-vertical-margin-top) !important;
+  margin-bottom: var(--img-vertical-margin-bottom) !important;
+  max-height: 50vh;
+}
+
+/* Mode aperçu : images normales */
+.markdown-preview-view img[src]:not([src*=".gif"]):not(.datacards-image):not(.banner-image) {
+  margin-top: var(--img-vertical-margin-top) !important;
+  margin-bottom: var(--img-vertical-margin-bottom) !important;
+  max-height: 50vh;
+}
+
+/* --- EXCEPTION : images marquées |full --- */
+/* |full enlève uniquement la limite de hauteur des images non flottantes */
+
+/* Live Preview / édition */
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="full"] img,
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="full"] img {
+  max-height: none !important;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+/* Reading view / aperçu */
+.markdown-preview-view .internal-embed[alt*="full"] img,
+.markdown-preview-view .image-embed[alt*="full"] img,
+.markdown-preview-view img[alt*="full"] {
+  max-height: none !important;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+/* --- BASE : IMAGES FLOTTANTES |right et |left --- */
+
+/* Conteneur flottant à droite : taille standard = md = 50% */
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="right"],
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="right"],
+.markdown-preview-view .internal-embed[alt*="right"],
+.markdown-preview-view .image-embed[alt*="right"] {
+  float: right;
+  clear: none;
+  width: var(--img-float-width-md);
+  max-width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-top: var(--img-vertical-margin-top) !important;
+  margin-bottom: var(--img-float-margin-bottom) !important;
+  box-sizing: border-box !important;
+}
+
+/* Conteneur flottant à gauche : taille standard = md = 50% */
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="left"],
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="left"],
+.markdown-preview-view .internal-embed[alt*="left"],
+.markdown-preview-view .image-embed[alt*="left"] {
+  float: left;
+  clear: none;
+  width: var(--img-float-width-md);
+  max-width: 100%;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  margin-top: var(--img-vertical-margin-top) !important;
+  margin-bottom: var(--img-float-margin-bottom) !important;
+  box-sizing: border-box !important;
+}
+
+/* L'image remplit proprement son conteneur flottant */
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="right"] img,
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="right"] img,
+.markdown-preview-view .internal-embed[alt*="right"] img,
+.markdown-preview-view .image-embed[alt*="right"] img,
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="left"] img,
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="left"] img,
+.markdown-preview-view .internal-embed[alt*="left"] img,
+.markdown-preview-view .image-embed[alt*="left"] img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* --- VARIANTES DE TAILLE : RIGHT --- */
+
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="right-sm"],
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="right-sm"],
+.markdown-preview-view .internal-embed[alt*="right-sm"],
+.markdown-preview-view .image-embed[alt*="right-sm"] {
+  width: var(--img-float-width-sm) !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="right-md"],
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="right-md"],
+.markdown-preview-view .internal-embed[alt*="right-md"],
+.markdown-preview-view .image-embed[alt*="right-md"] {
+  width: var(--img-float-width-md) !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="right-lg"],
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="right-lg"],
+.markdown-preview-view .internal-embed[alt*="right-lg"],
+.markdown-preview-view .image-embed[alt*="right-lg"] {
+  width: var(--img-float-width-lg) !important;
+}
+
+/* --- VARIANTES DE TAILLE : LEFT --- */
+
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="left-sm"],
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="left-sm"],
+.markdown-preview-view .internal-embed[alt*="left-sm"],
+.markdown-preview-view .image-embed[alt*="left-sm"] {
+  width: var(--img-float-width-sm) !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="left-md"],
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="left-md"],
+.markdown-preview-view .internal-embed[alt*="left-md"],
+.markdown-preview-view .image-embed[alt*="left-md"] {
+  width: var(--img-float-width-md) !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content .internal-embed[alt*="left-lg"],
+.markdown-source-view.mod-cm6 .cm-content .image-embed[alt*="left-lg"],
+.markdown-preview-view .internal-embed[alt*="left-lg"],
+.markdown-preview-view .image-embed[alt*="left-lg"] {
+  width: var(--img-float-width-lg) !important;
+}
+
+/* --- SÉCURITÉ DANS LES CALLOUTS --- */
+
+.callout .internal-embed[alt*="right"],
+.callout .image-embed[alt*="right"],
+.callout .internal-embed[alt*="left"],
+.callout .image-embed[alt*="left"],
+.callout .internal-embed[alt*="full"],
+.callout .image-embed[alt*="full"] {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.callout .internal-embed[alt*="right"] img,
+.callout .image-embed[alt*="right"] img,
+.callout .internal-embed[alt*="left"] img,
+.callout .image-embed[alt*="left"] img,
+.callout .internal-embed[alt*="full"] img,
+.callout .image-embed[alt*="full"] img,
+.callout img[alt*="right"],
+.callout img[alt*="left"],
+.callout img[alt*="full"] {
+  max-width: 100% !important;
+  height: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Dernier garde-fou contre le léger débordement horizontal dans certains callouts */
+.callout .callout-content {
+  overflow-x: hidden;
+}
+
+/* Supprimer le <br> ajouté automatiquement après les images normales (pas GIF) */
+.markdown-preview-view img[src]:not([src*=".gif"]) + br {
+  display: none !important;
+}
+
+/* pour que le div  du bloccode de l'image s'adapte parfaitement a elle */
+.image-wrapper {
+  display: inline-block;
+  width: fit-content;
+  line-height: 0;
+  position: relative;
+}
+
+.image-wrapper img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.internal-embed.image-embed {
+  display: inline-block;
+  line-height: 0;
+  vertical-align: top;
+}
+
+.internal-embed.image-embed img {
+  display: block;
+}
+

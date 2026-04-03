@@ -1,0 +1,63 @@
+/* Notion-like Dataview LIST with your page icon */
+
+.notion-list .dataview ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 8px 0;
+}
+
+.notion-list .dataview li {
+  margin: 0;
+  padding: 0;
+}
+
+/* sous-liste imbriquée sous une folder note */
+.notion-list .dataview li > ul {
+  padding-left: 1.25rem;
+  margin-top: 0.15rem;
+}
+
+.notion-list .dataview li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--text-normal);
+}
+
+.notion-list .dataview li a:hover {
+  background: var(--background-modifier-hover);
+}
+
+/* underline links (very light gray) and keep it unchanged on hover */
+.notion-list .dataview li a {
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 4px !important;
+  text-decoration-color: var(--background-modifier-border) !important;
+  font-weight: 600 !important;
+}
+
+/* sous-fichiers légèrement différents */
+.notion-list .dataview li > ul > li > a {
+  padding-left: 0.25rem;
+  font-weight: 500 !important;
+}
+
+/* do NOT change color or underline on hover */
+.notion-list .dataview li a:hover {
+  color: var(--text-normal) !important;
+  text-decoration-line: underline !important;
+  text-decoration-color: var(--background-modifier-border) !important;
+}
+
+.notion-list .dataview li a .npis-inline-icon.npis-link-icon {
+  font-size: 1.2em;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+}

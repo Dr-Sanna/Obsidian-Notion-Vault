@@ -1,0 +1,184 @@
+/* ========== listcols APPLIQUÉ UNIQUEMENT AU CALLOUT "dashboard" ========== */
+
+/* Variables (fonctionnent en clair + sombre car basées sur les variables Obsidian) */
+
+
+/* Colonnes : seulement dans le callout dashboard */
+.listcols .callout[data-callout="dashboard"] ul{
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 20px !important;
+
+  padding: 0 !important;
+  margin: 0.4em 0 !important;
+  list-style: none !important;
+}
+
+/* Niveau 1 */
+.listcols .callout[data-callout="dashboard"] ul > li{
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+
+  margin: 0 !important;
+
+
+  border-radius: 4px !important;
+  background: var(--dash-item-bg) !important;
+  list-style: none !important;
+}
+
+/* Sous-listes */
+.listcols .callout[data-callout="dashboard"] ul ul{
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  gap: 1px !important;
+  margin-top: 0 !important;
+
+  list-style: none !important;
+  border-radius: 8px;
+  background: var(--dash-subitem-bg) !important;
+}
+
+/* Niveau 2 */
+.listcols .callout[data-callout="dashboard"] ul ul > li{
+  flex: initial !important;
+  min-width: initial !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  transition: 200ms ease all !important;
+  list-style: none !important;
+  background: var(--dash-subitem-bg) !important;
+
+}
+
+/* Boutons : tout le bloc cliquable (Reading view) */
+.listcols .callout[data-callout="dashboard"] ul ul > li{
+  padding: 0 !important;
+}
+.listcols .callout[data-callout="dashboard"] ul ul > li > a{
+  display: block !important;
+  width: 100% !important;
+  padding: 0.3em 0em !important;
+
+  color: var(--text-normal) !important;
+    text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--background-modifier-border);
+font-weight: 600;
+}
+
+/* Hover niveau 2 */
+.listcols .callout[data-callout="dashboard"] ul ul > li:hover{
+  background: var(--dash-subitem-hover) !important;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .listcols .callout[data-callout="dashboard"] ul{
+    flex-wrap: wrap !important;
+  }
+  .listcols .callout[data-callout="dashboard"] ul > li{
+    flex: 1 1 260px !important;
+  }
+}
+
+/* Puces */
+.listcols .callout[data-callout="dashboard"] ul.has-list-bullet > li > span.list-bullet,
+.listcols .callout[data-callout="dashboard"] ul.has-list-bullet ul.has-list-bullet > li > span.list-bullet{
+  display: none !important;
+}
+.listcols .callout[data-callout="dashboard"] li::marker{ content: "" !important; }
+.listcols .callout[data-callout="dashboard"] li::before,
+.listcols .callout[data-callout="dashboard"] li::after{
+  content: none !important;
+  display: none !important;
+}
+
+/* Masquer les guides d'indentation (les lignes verticales) dans le callout dashboard */
+.markdown-rendered.show-indentation-guide
+.callout[data-callout="dashboard"] li > ul::before,
+.markdown-rendered.show-indentation-guide
+.callout[data-callout="dashboard"] li > ol::before{
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+}
+
+
+.markdown-rendered .callout[data-callout="dashboard"] {
+  background: transparent !important;
+  border: 0 !important;
+  padding-bottom: 0.4em !important;
+
+padding: 0;
+padding-top: 5px;
+}
+
+/* Si ton thème ajoute une classe drop-shadow */
+.markdown-rendered .callout[data-callout="dashboard"].drop-shadow{
+  box-shadow: none !important;
+}
+
+/* Header */
+.markdown-rendered .callout[data-callout="dashboard"] .callout-title{
+  background: transparent !important;
+  border: 0 !important;
+  padding-bottom: 0.4em !important;
+  color: var(--text-normal) !important;
+}
+
+/* Contenu */
+.markdown-rendered .callout[data-callout="dashboard"] .callout-content{
+  background: transparent !important;
+}
+
+/* Optionnel : enlever la barre/ligne à gauche (certains thèmes) */
+.markdown-rendered .callout[data-callout="dashboard"]::before{
+  display: none !important;
+}
+
+.callout-content > ul.has-list-bullet > li > strong {
+  font-size: 1.15em;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+/* style des liens de premier niveau de la liste */
+
+/* ===== Lien H4 "Work" du dashboard -> style notion-list sans icône ===== */
+
+/* ===== Dashboard : tous les H4 de premier niveau ===== */
+.listcols .callout[data-callout="dashboard"] .callout-content > ul > li > h4 {
+  display: inline-block;
+  margin: 0 0 0 -6px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: background 150ms ease;
+}
+
+/* Même hover que notion-list */
+.listcols .callout[data-callout="dashboard"] .callout-content > ul > li > h4:hover {
+  background: var(--background-modifier-hover) !important;
+}
+
+/* Si le H4 contient un lien, il garde l'apparence du H4 */
+.listcols .callout[data-callout="dashboard"] .callout-content > ul > li > h4 > a.internal-link {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Hover du lien : pas de soulignage, pas de couleur différente */
+.listcols .callout[data-callout="dashboard"] .callout-content > ul > li > h4 > a.internal-link:hover {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* Masque l’icône seulement pour les H4 qui ont un lien */
+.listcols .callout[data-callout="dashboard"] .callout-content > ul > li > h4 > a.internal-link .npis-inline-icon {
+  display: none !important;
+}
+

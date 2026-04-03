@@ -1,0 +1,96 @@
+div.npis-inline-title-parent[data-npis-title-wrapper="1"]{
+  --npis-icon-size: 60px;
+  --npis-gap: 0.5rem;
+
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-height: var(--npis-icon-size);
+}
+
+/* Icône fixée à gauche */
+div.npis-inline-title-parent[data-npis-title-wrapper="1"] > .npis-inline-icon{
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  width: var(--npis-icon-size) !important;
+  min-width: var(--npis-icon-size) !important;
+  max-width: var(--npis-icon-size) !important;
+  height: var(--npis-icon-size) !important;
+  min-height: var(--npis-icon-size) !important;
+  max-height: var(--npis-icon-size) !important;
+
+  margin: 0 !important;
+}
+
+/* Titre : seule la 1re ligne est décalée à droite */
+div.npis-inline-title-parent[data-npis-title-wrapper="1"] > .inline-title{
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+
+  text-indent: calc(var(--npis-icon-size) + var(--npis-gap));
+}
+
+div.npis-inline-title-parent[data-npis-title-wrapper="1"] > 
+.npis-inline-icon.npis-inline-title-icon.npis-inline-title-icon-slot.npis-icon-emoji{
+  top: 0 !important;
+  left: 0 !important;
+  align-self: flex-start !important;
+  vertical-align: top !important;
+  transform: none !important;
+  margin-top: 0 !important;
+}
+
+/**** TITRES DOCUMENTS ET FRONTMATTER ****/
+
+.markdown-preview-view .npis-inline-title-parent {
+    z-index: 100;
+margin-bottom: 3rem;
+margin-top: 1rem;
+}
+
+
+
+.markdown-preview-view .npis-inline-title-parent > .inline-title {
+padding-left: 0rem !important; }
+
+.markdown-source-view .npis-inline-title-parent > .inline-title {
+padding-left: 0rem !important;
+margin-top: 1rem !important;
+
+}
+
+.markdown-source-view .npis-inline-title-parent > .npis-inline-title-icon-slot {
+    left: 0 !important;
+    top: 0.1em !important;
+    margin-top: 1rem !important;
+ }
+
+
+
+
+
+
+
+.markdown-preview-view .inline-title + .metadata-container, .markdown-preview-view .inline-title + .metadata-properties, .markdown-preview-view .npis-inline-title-parent + .metadata-container, .markdown-preview-view .npis-inline-title-parent + .metadata-properties {
+    margin-top: 0.2em !important;
+margin-bottom: 2em !important;
+}
+
+.markdown-source-view.is-live-preview.show-properties .metadata-container:not(.mod-error) {
+    margin-top: 0em !important;
+}
+
+.markdown-source-view .npis-inline-title-parent {
+margin-bottom: 4rem !important;
+}
+

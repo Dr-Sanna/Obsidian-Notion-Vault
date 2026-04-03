@@ -1,0 +1,166 @@
+/* =========================================================
+   CALROW 40vh — fit à gauche sans overflow hidden
+   ========================================================= */
+
+.callout[data-callout="calrow"]{
+  --row-h: 40vh;
+  --row-pad: 0px;
+  --gap: 8px;
+
+  --right-max: 320px;
+
+  /* ✅ marge de sécurité pour la gauche (réserve un peu de place) */
+  --left-safe: 14px;
+
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.callout[data-callout="calrow"][data-callout-metadata~="no-title"] > .callout-title{
+  display: none !important;
+}
+
+.callout[data-callout="calrow"] > .callout-content{
+  height: var(--row-h) !important;
+  padding: var(--row-pad) !important;
+  box-sizing: border-box !important;
+
+  display: grid !important;
+  gap: var(--gap);
+
+  --right-size: min(
+    var(--right-max),
+    calc(var(--row-h) - (2 * var(--row-pad)))
+  );
+
+  grid-template-columns: 1fr minmax(0, var(--right-size));
+  align-items: stretch !important;
+
+  min-width: 0 !important;
+  min-height: 0 !important;
+}
+
+/* Colonnes */
+.callout[data-callout="calleft"],
+.callout[data-callout="calright"]{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  min-width: 0 !important;
+  min-height: 0 !important;
+  height: 100% !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.callout[data-callout="calleft"][data-callout-metadata~="no-title"] > .callout-title,
+.callout[data-callout="calright"][data-callout-metadata~="no-title"] > .callout-title{
+  display: none !important;
+}
+
+.callout[data-callout="calleft"] > .callout-content,
+.callout[data-callout="calright"] > .callout-content{
+  padding: 0 !important;
+  margin: 0 !important;
+
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  height: 100% !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* --------- GAUCHE : dataviewjs doit remplir --------- */
+.callout[data-callout="calleft"] > .callout-content > .block-language-dataviewjs{
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ✅ FIT LEFT: on limite la hauteur de la grille week pour qu’elle “rentre” */
+.callout[data-callout="calleft"] .tasksCalendar{
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
+.callout[data-callout="calleft"] .tasksCalendar .grid{
+  /* la grille week ne dépasse pas la hauteur de la rangée moins une sécurité */
+  max-height: calc(var(--row-h) - var(--left-safe)) !important;
+  height: auto !important;
+}
+
+/* --------- DROITE : carré qui fit --------- */
+.callout[data-callout="calright"]{
+  --right-pad: 10px;
+  padding: var(--right-pad) !important;
+  box-sizing: border-box !important;
+}
+
+.callout[data-callout="calright"] > .callout-content{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.callout[data-callout="calright"] > .callout-content > .block-language-react,
+.callout[data-callout="calright"] > .callout-content .react-component-container{
+  width: 100% !important;
+  height: 100% !important;
+
+  aspect-ratio: 1 / 1;
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.callout[data-callout="calright"] .hc-panel{
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .callout[data-callout="calrow"] > .callout-content{
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .callout[data-callout="calleft"],
+  .callout[data-callout="calright"]{
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .callout[data-callout="calright"] > .callout-content > .block-language-react,
+  .callout[data-callout="calright"] > .callout-content .react-component-container{
+    aspect-ratio: auto !important;
+    height: auto !important;
+  }
+}
+
+/* Hauteur cible du week view à gauche */
+.callout[data-callout="calrow"]{
+  --left-week-h: 82%;   /* mets 100% pour remplir, ou ex: 90% pour laisser une marge */
+}
+.callout[data-callout="calleft"] .tasksCalendar{
+  height: 100% !important;
+}
+
+.callout[data-callout="calleft"] .tasksCalendar .grid{
+  height: var(--left-week-h) !important;   /* ✅ c’est ça le réglage */
+}
