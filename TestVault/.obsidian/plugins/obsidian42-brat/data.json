@@ -1,0 +1,38 @@
+{
+  "pluginList": [
+    "brielms/base-grid",
+    "deathau/cm-editor-syntax-highlight-obsidian",
+    "hedonihilist/obsidian-habit-calendar",
+    "ewerx/obsidian-bases-kanban"
+  ],
+  "pluginSubListFrozenVersion": [
+    {
+      "repo": "brielms/base-grid",
+      "version": ""
+    },
+    {
+      "repo": "deathau/cm-editor-syntax-highlight-obsidian",
+      "version": ""
+    },
+    {
+      "repo": "hedonihilist/obsidian-habit-calendar",
+      "version": ""
+    },
+    {
+      "repo": "ewerx/obsidian-bases-kanban",
+      "version": ""
+    }
+  ],
+  "themesList": [],
+  "updateAtStartup": true,
+  "updateThemesAtStartup": true,
+  "enableAfterInstall": true,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": false,
+  "notificationsEnabled": true,
+  "personalAccessToken": "",
+  "selectLatestPluginVersionByDefault": false,
+  "allowIncompatiblePlugins": false
+}

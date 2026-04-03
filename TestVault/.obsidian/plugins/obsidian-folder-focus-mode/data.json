@@ -1,0 +1,9 @@
+{
+  "autofocusMode": true,
+  "autofocusRoot": true,
+  "autofocusForced": true,
+  "simplifiedView": true,
+  "focusButton": true,
+  "focusNote": false,
+  "fileContextMenu": false
+}
