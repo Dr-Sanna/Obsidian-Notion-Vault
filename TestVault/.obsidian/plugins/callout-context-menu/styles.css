@@ -1,0 +1,89 @@
+/* ---------- Callout metadata styling (pipe syntax) ---------- */
+
+.callout[data-callout-metadata*="no-icon"] .callout-icon { display: none !important; }
+.callout[data-callout-metadata*="no-title"] .callout-title { display: none !important; }
+.callout[data-callout-metadata*="no-title"] { --callout-title-padding: 0; }
+
+/* Colors applied to callouts */
+.callout[data-callout-metadata*="slate"]  { --callout-color: 140, 140, 140; --callout-background: 140, 140, 140, 0.12; }
+.callout[data-callout-metadata*="red"]    { --callout-color: 255,  90,  90; --callout-background: 255,  90,  90, 0.12; }
+.callout[data-callout-metadata*="orange"] { --callout-color: 255, 170,  80; --callout-background: 255, 170,  80, 0.14; }
+.callout[data-callout-metadata*="yellow"] { --callout-color: 230, 200,  80; --callout-background: 230, 200,  80, 0.14; }
+.callout[data-callout-metadata*="green"]  { --callout-color:  80, 200, 120; --callout-background:  80, 200, 120, 0.12; }
+.callout[data-callout-metadata*="cyan"]   { --callout-color:  80, 200, 255; --callout-background:  80, 200, 255, 0.12; }
+.callout[data-callout-metadata*="blue"]   { --callout-color:  70, 130, 255; --callout-background:  70, 130, 255, 0.12; }
+.callout[data-callout-metadata*="purple"] { --callout-color: 170, 120, 255; --callout-background: 170, 120, 255, 0.12; }
+.callout[data-callout-metadata*="pink"]   { --callout-color: 255, 120, 200; --callout-background: 255, 120, 200, 0.12; }
+
+/* ---------- Menu previews ---------- */
+
+.ccm-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: -2px;
+  background: rgba(var(--ccm-bg));
+  border: 1px solid rgb(var(--ccm-border));
+  box-sizing: border-box;
+}
+
+/* Same values as callout variables above */
+.ccm-swatch.ccm-slate  { --ccm-border: 140, 140, 140; --ccm-bg: 140, 140, 140, 0.12; }
+.ccm-swatch.ccm-red    { --ccm-border: 255,  90,  90; --ccm-bg: 255,  90,  90, 0.12; }
+.ccm-swatch.ccm-orange { --ccm-border: 255, 170,  80; --ccm-bg: 255, 170,  80, 0.14; }
+.ccm-swatch.ccm-yellow { --ccm-border: 230, 200,  80; --ccm-bg: 230, 200,  80, 0.14; }
+.ccm-swatch.ccm-green  { --ccm-border:  80, 200, 120; --ccm-bg:  80, 200, 120, 0.12; }
+.ccm-swatch.ccm-cyan   { --ccm-border:  80, 200, 255; --ccm-bg:  80, 200, 255, 0.12; }
+.ccm-swatch.ccm-blue   { --ccm-border:  70, 130, 255; --ccm-bg:  70, 130, 255, 0.12; }
+.ccm-swatch.ccm-purple { --ccm-border: 170, 120, 255; --ccm-bg: 170, 120, 255, 0.12; }
+.ccm-swatch.ccm-pink   { --ccm-border: 255, 120, 200; --ccm-bg: 255, 120, 200, 0.12; }
+
+.ccm-type-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  vertical-align: -3px;
+}
+
+/* ---------- Preview only for the 2 Columns scaffold ---------- */
+
+.callout[data-callout="multi-column"] {
+  --callout-color: 140, 140, 160;
+  --callout-background: 140, 140, 160, 0.10;
+  --callout-icon: lucide-columns-2;
+}
+
+/* ---------- CM preview widget ---------- */
+
+.ccm-cm-preview-host {
+  pointer-events: none;
+  caret-color: transparent !important;
+}
+
+.ccm-cm-preview-host[data-ccm-preview="true"] .edit-block-button {
+  display: none !important;
+}
+
+.ccm-cm-preview-host[data-ccm-preview="true"] > .markdown-rendered {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.cm-editor.ccm-preview-active .cm-cursorLayer,
+.cm-editor.ccm-preview-active .cm-selectionLayer {
+  opacity: 0 !important;
+}
+
+.cm-editor.ccm-preview-active .cm-cursor,
+.cm-editor.ccm-preview-active .cm-dropCursor,
+.cm-editor.ccm-preview-active .cm-cursorLayer .cm-cursor,
+.cm-editor.ccm-preview-active .cm-cursorLayer .cm-cursor-primary {
+  opacity: 0 !important;
+  display: none !important;
+}
+
+.cm-editor.ccm-preview-active .cm-content {
+  caret-color: transparent !important;
+}

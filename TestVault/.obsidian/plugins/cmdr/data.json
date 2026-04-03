@@ -1,0 +1,62 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": false,
+  "debug": false,
+  "editorMenu": [
+    {
+      "id": "templater-obsidian:Obsidian/Templates/Pagination/Insert pagination.md",
+      "icon": "lucide-arrow-right-left",
+      "name": "Insert Pagination",
+      "mode": "any"
+    },
+    {
+      "id": "insert-template",
+      "icon": "lucide-copy",
+      "name": "Insérer le modèle",
+      "mode": "any"
+    }
+  ],
+  "fileMenu": [],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "editor:download-attachments",
+      "icon": "lucide-download-cloud",
+      "name": "Télécharger les pièces jointes pour le fichier actuel",
+      "mode": "any"
+    },
+    {
+      "id": "yaml-picker:open-yaml-picker",
+      "icon": "lucide-paintbrush-vertical",
+      "name": "YAML Picker",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:b6b6a3fc-71be-4e8d-8739-19630dc1f836",
+      "icon": "lucide-house",
+      "name": "QuickAdd: Homepage",
+      "mode": "any",
+      "color": "#4c9a61"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

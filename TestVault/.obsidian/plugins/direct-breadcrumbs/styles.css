@@ -1,0 +1,19 @@
+.view-header-breadcrumb.direct-breadcrumbs-clickable {
+  cursor: pointer;
+}
+
+.view-header-breadcrumb.direct-breadcrumbs-clickable:hover {
+  background-color: var(--background-modifier-hover);
+  color: var(--text-normal);
+  border-radius: var(--radius-s);
+}
+
+.view-header-breadcrumb.direct-breadcrumbs-missing {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.direct-breadcrumbs-hidden,
+.direct-breadcrumbs-separator-hidden {
+  display: none !important;
+}

@@ -1,0 +1,9 @@
+{
+  "id": "context-menu-manager",
+  "name": "Context Menu Manager",
+  "version": "0.13.1",
+  "minAppVersion": "1.1.7",
+  "description": "Context menu manager with faithful DOM detection, exact path-based hiding, global rules, Lucide picker, drag-and-drop, and manual detection targets with separate tabs for normal, heading, and selected-text menus.",
+  "author": "DrSanna",
+  "isDesktopOnly": true
+}

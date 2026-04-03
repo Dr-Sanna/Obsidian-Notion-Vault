@@ -1,0 +1,9 @@
+{
+  "jsFiles": "",
+  "jsFolder": "Obsidian/Scripts/CustomJS",
+  "startupScriptNames": [
+    "DataCardsNoPopover"
+  ],
+  "registeredInvocableScriptNames": [],
+  "rerunStartupScriptsOnFileChange": false
+}

@@ -1,0 +1,9 @@
+{
+  "id": "direct-breadcrumbs",
+  "name": "Direct Breadcrumbs",
+  "version": "0.1.1",
+  "minAppVersion": "1.10.4",
+  "description": "Open notes directly from header breadcrumbs, with automatic folder note collapsing.",
+  "author": "DrSanna",
+  "isDesktopOnly": true
+}

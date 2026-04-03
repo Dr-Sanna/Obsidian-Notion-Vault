@@ -1,0 +1,9 @@
+{
+  "id": "callout-context-menu",
+  "name": "Callout Context Menu",
+  "version": "0.10.5",
+  "minAppVersion": "1.1.7",
+  "description": "Live preview callouts, columns, and formatting script",
+  "author": "DrSanna",
+  "isDesktopOnly": true
+}
