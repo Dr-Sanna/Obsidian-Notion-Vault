@@ -1,0 +1,210 @@
+/* === GitHub-style tables for Obsidian (bordures visibles en light + dark) === */
+
+
+/* Gras différent de body */
+/* Reading view */
+.markdown-rendered td strong,
+.markdown-rendered th strong {
+  font-weight: 600 !important;
+}
+
+/* Preview view */
+.markdown-source-view.mod-cm6 .cm-html-embed td strong,
+.markdown-source-view.mod-cm6 .cm-html-embed th strong {
+  font-weight: 600 !important;
+}
+
+/* Bordure auto (basée sur la couleur du texte du thème) */
+:root * {
+  --tbl-border: color-mix(in srgb, var(--text-normal) 18%, transparent);
+  --tbl-code-bg: var(--background-secondary);
+  --tbl-font-size: 0.9em;
+  --tbl-padding: 0.5em 0.5em;
+}
+
+/* EDITION : wrapper interne à 0 (évite double padding / padding imposé par thème) */
+.markdown-source-view.mod-cm6 .cm-content table :is(td, th) > .table-cell-wrapper{
+  padding: 0 !important;
+}
+
+/* Tables Markdown rendues en Live Preview (couvre plus de cas) */
+.markdown-source-view.mod-cm6 .cm-table-widget table :is(th, td),
+.markdown-source-view.mod-cm6 .cm-embed-block.cm-table-widget table :is(th, td) {
+    padding: var(--tbl-padding) !important;
+}
+
+/* En dark, on renforce un peu la bordure */
+.theme-dark{
+  --tbl-border: color-mix(in srgb, var(--text-normal) 26%, transparent);
+}
+
+/* ===== Mode lecture + widget ===== */
+.markdown-preview-view table,
+.cm-embed-block.cm-table-widget table,
+.markdown-source-view.mod-cm6 .cm-html-embed table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 1em 0;
+
+
+  border: 1px solid var(--tbl-border) !important; /* bordure externe */
+}
+
+.markdown-preview-view table th,
+.markdown-preview-view table td,
+.cm-embed-block.cm-table-widget th,
+.cm-embed-block.cm-table-widget td,
+.markdown-source-view.mod-cm6 .cm-html-embed th,
+.markdown-source-view.mod-cm6 .cm-html-embed td{
+  border: 1px solid var(--tbl-border) !important; /* bordures internes */
+  padding: var(--tbl-padding) !important;
+  text-align: left;
+  vertical-align: top;
+  color: var(--text-normal);
+font-size: var(--tbl-font-size) !important;
+}
+
+/* ===== Header (thead) ===== */
+.theme-light .markdown-preview-view table thead tr,
+.theme-light .cm-embed-block.cm-table-widget thead tr,
+.theme-light .markdown-source-view.mod-cm6 .cm-html-embed thead tr{
+  background-color: var(--background-secondary);
+}
+
+thead, th {
+  background-color: var(--background-secondary) !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  vertical-align: middle !important;
+}
+
+.markdown-preview-view table th,
+.cm-embed-block.cm-table-widget th,
+.markdown-source-view.mod-cm6 .cm-html-embed th{
+  font-weight: 600;
+}
+
+/* ===== Inline code ===== */
+.markdown-preview-view table code,
+.cm-embed-block.cm-table-widget code,
+.markdown-source-view.mod-cm6 .cm-html-embed code{
+  background-color: var(--tbl-code-bg);
+  border-radius: 6px;
+  padding: var(--tbl-padding) !important;
+  font-size: 90%;
+}
+
+/* ===== Nettoyage focus ===== */
+.cm-embed-block.cm-table-widget.has-focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+
+.markdown-source-view.mod-cm6 .cm-html-embed.cm-embed-block {
+  position: relative;
+}
+
+.htw-live-edit-wrap {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+
+.htw-live-edit-btn {
+  font-size: 12px;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.markdown-source-view.mod-cm6 .cm-html-embed.cm-embed-block:hover .htw-live-edit-wrap,
+.markdown-source-view.mod-cm6 .cm-html-embed.cm-embed-block:focus-within .htw-live-edit-wrap {
+  opacity: 1;
+}
+
+.markdown-source-view .cm-html-embed.cm-embed-block .edit-block-button{
+  display: none;
+}
+
+/* === EDITION (Live Preview) : aligne les tables comme en preview === */
+
+/* 1) Table elle-même */
+.markdown-source-view.mod-cm6 .cm-content table{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* 2) Si la table est dans un widget Obsidian */
+.markdown-source-view.mod-cm6 .cm-content .cm-table-widget,
+.markdown-source-view.mod-cm6 .cm-content .cm-embed-block.cm-table-widget{
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* 3) Si Obsidian met un wrapper type table-wrapper */
+.markdown-source-view.mod-cm6 .cm-content .table-wrapper{
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* ===== Blocs personnalisés ===== */
+.theme-light .bg-bloc{
+  background-color: #f6f8fa !important;
+}
+
+.theme-dark .bg-bloc{
+  background-color: var(--background-secondary) !important;
+}
+
+.theme-light .bg-bloc-centered{
+  background-color: #f6f8fa !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  vertical-align: middle !important;
+}
+.theme-dark .bg-bloc-centered{
+  background-color: var(--background-secondary) !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  vertical-align: middle !important;
+}
+
+.text-center{
+  text-align: center !important;
+  font-weight: 600 !important;
+  vertical-align: middle !important;
+}
+
+
+.def-table td {
+  padding: 0;
+  vertical-align: top;
+  white-space: normal !important;
+}
+
+.def-table td p {
+  margin: 0;
+  line-height: 1.5;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.def-table td p:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.font-bold{
+  font-weight: 600 !important;
+}
+

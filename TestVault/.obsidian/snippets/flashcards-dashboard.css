@@ -1,0 +1,67 @@
+/* --- Flashcards dashboard: séparateurs verticaux Dataview --- */
+.flashcards-dashboard table.dataview.table-view-table {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+}
+
+/* Bordure sur une colonne (header + body) */
+.flashcards-dashboard table.dataview.table-view-table thead th,
+.flashcards-dashboard table.dataview.table-view-table tbody td {
+  padding-right: 10px !important;
+}
+
+/* Ajuste largeur/couleur des séparateurs */
+.flashcards-dashboard {
+  --fc-sep-w: 2px;
+  --fc-sep-col: var(--background-modifier-border);
+}
+
+/*
+Ordre des colonnes (d’après ton tableau):
+1 Paquet
+2 Total cartes
+3 Q/R simple (cartes)
+4 :: (uni)
+5 ::: (bi×2)
+6 Q/R complexe (cartes)
+7 ? (uni)
+8 ?? (bi×2)
+9 Cloze
+
+Bordure à droite de:
+- 3 (résultat simple)
+- 5 (::: bi×2)
+- 6 (résultat complexe)
+- 8 (?? bi×2)
+*/
+.flashcards-dashboard table.dataview.table-view-table thead th:nth-child(3),
+.flashcards-dashboard table.dataview.table-view-table tbody td:nth-child(3),
+.flashcards-dashboard table.dataview.table-view-table thead th:nth-child(5),
+.flashcards-dashboard table.dataview.table-view-table tbody td:nth-child(5),
+.flashcards-dashboard table.dataview.table-view-table thead th:nth-child(6),
+.flashcards-dashboard table.dataview.table-view-table tbody td:nth-child(6),
+.flashcards-dashboard table.dataview.table-view-table thead th:nth-child(8),
+.flashcards-dashboard table.dataview.table-view-table tbody td:nth-child(8) {
+  border-right: var(--fc-sep-w) solid var(--fc-sep-col) !important;
+}
+/* bordure à gauche du groupe Q/R simple (col 3) */
+.flashcards-dashboard table.dataview.table-view-table thead th:nth-child(3),
+.flashcards-dashboard table.dataview.table-view-table tbody td:nth-child(3) {
+  border-left: var(--fc-sep-w) solid var(--fc-sep-col) !important;
+}
+
+/* Bouton action sur cartes DataCards */
+.datacards-card .dc-action{
+  position: relative;
+  z-index: 50;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Optionnel: placer le bouton en haut à droite si DataCards le met dans le flux */
+.datacards-card .datacards-file-property:last-child{
+  margin-top: 6px;
+}

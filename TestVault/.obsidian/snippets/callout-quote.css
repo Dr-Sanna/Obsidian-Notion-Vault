@@ -1,0 +1,163 @@
+/* =========================
+   QUOTES — styles + suppression barre en ÉDITION (Live Preview)
+   - Callout [!quote] : style “book” (lecture) + auteur via .quote-author
+   - Blockquote (>) : style lecture uniquement
+   - Live Preview : supprime la barre colorée (souvent verte)
+   ========================= */
+
+
+/* =========================================================
+   1) CALLOUT [!quote] — LECTURE (reading mode)
+   ========================================================= */
+
+.markdown-rendered .callout[data-callout="quote"] {
+  border: 1px solid var(--background-modifier-border);
+  background: color-mix(in srgb, var(--background-secondary) 65%, transparent);
+  color: var(--text-normal) !important;
+}
+
+.markdown-rendered .callout[data-callout="quote"] .callout-title {
+  font-weight: 700;
+  opacity: 0.9;
+  color: var(--text-normal) !important;
+}
+
+/* Auteur : <span class="quote-author">— Auteur</span> */
+.markdown-rendered .callout[data-callout="quote"] .callout-content .quote-author {
+  display: block;
+  margin-top: 0.75rem;
+  text-align: right;
+
+  font-style: normal;
+  font-weight: 600;
+  opacity: 0.85;
+  color: var(--text-muted) !important;
+}
+
+
+/* =========================================================
+   2) CALLOUT [!quote] — ÉDITION (Live Preview)
+   Objectif : enlever la barre colorée native du callout
+   (souvent via border-left + variables --callout-*)
+   ========================================================= */
+
+/* Override très large (au cas où le thème cible .callout en général) */
+.markdown-source-view.mod-cm6 .callout[data-callout="quote"],
+.markdown-source-view.mod-cm6 .cm-preview-section .callout[data-callout="quote"] {
+  /* coupe la “barre” native */
+  border-left: 0 !important;
+  border-left-width: 0 !important;
+  border-left-color: transparent !important;
+
+  /* variables utilisées par Obsidian/thèmes */
+  --callout-border-width: 0px !important;
+  /* IMPORTANT : ne pas forcer --callout-color à noir en dark */
+
+  /* optionnel : garder un look proche de la lecture */
+  border: 1px solid var(--background-modifier-border) !important;
+  background: color-mix(in srgb, var(--background-secondary) 65%, transparent) !important;
+  color: var(--text-normal) !important;
+}
+
+
+/* =========================================================
+   3) BLOCKQUOTE (>) — LECTURE (reading mode)
+   ========================================================= */
+
+.markdown-rendered blockquote {
+  background-color: transparent;
+  border: 0px solid;
+  border-color: var(--background-modifier-border) !important;
+  border-left-width: 8px !important;
+  border-radius: 20px 8px 8px 20px;
+
+  font-family: sans-serif;
+  color: var(--text-normal) !important;
+  font-size: 15px;
+  line-height: 1.5em;
+
+  margin: 1rem;
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+
+
+/* =========================================================
+   4) BLOCKQUOTE (>) — ÉDITION (Live Preview)
+   Objectif : enlever la barre (souvent verte) à gauche
+   Obsidian/Thèmes peuvent la mettre sur la ligne ou via ::before
+   ========================================================= */
+
+/* Cible large sur les lignes quote CM6 */
+.markdown-source-view.mod-cm6 .cm-content .cm-line.HyperMD-quote,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-quote,
+.markdown-source-view.mod-cm6 .cm-content .cm-quote,
+.markdown-source-view.mod-cm6 .cm-content .cm-blockquote {
+  border-left: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* Si la barre est dessinée via pseudo-élément */
+.markdown-source-view.mod-cm6 .cm-content .cm-line.HyperMD-quote::before,
+.markdown-source-view.mod-cm6 .cm-content .HyperMD-quote::before,
+.markdown-source-view.mod-cm6 .cm-content .cm-quote::before,
+.markdown-source-view.mod-cm6 .cm-content .cm-blockquote::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  border: none !important;
+}
+
+/* Si tu veux garder une petite bordure (compatible dark) */
+.markdown-source-view.mod-cm6 .cm-content .cm-line.HyperMD-quote {
+  border-left: 4px solid var(--background-modifier-border) !important;
+  margin-left: 1rem;
+}
+
+/* Auteur “en dehors” du blockquote */
+.markdown-rendered .quote-author {
+  display: block;
+  margin-top: 0.35rem;
+  margin-left: 1rem;      /* aligne visuellement avec ton quote (tu as margin-left:1rem en édition) */
+  text-align: right;
+
+  font-style: normal;
+  font-weight: 600;
+  opacity: 0.85;
+  color: var(--text-muted) !important;
+}
+
+/* ===== Live Preview : auteur (HTML embed) sans casser la hauteur de ligne ===== */
+.markdown-source-view.mod-cm6 .cm-line:has(> span.cm-html-embed > span.quote-author) {
+  text-align: right;
+  padding-right: 0.5rem;   /* optionnel */
+}
+
+/* Style du texte de l'auteur (sans display:block) */
+.markdown-source-view.mod-cm6 span.cm-html-embed > span.quote-author {
+  font-style: normal;
+  font-weight: 600;
+  opacity: 0.85;
+  display: inline;         /* explicite */
+  color: var(--text-muted) !important;
+}
+
+blockquote:before {
+  font: 14px/20px italic Times, serif;
+  content: "“";
+  font-size: 3em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+  color: var(--text-muted);
+}
+
+blockquote p {
+  display: inline;
+}
+
+/* Remove blockquote left margin */
+blockquote {
+  margin-inline-start: 0;
+}
+

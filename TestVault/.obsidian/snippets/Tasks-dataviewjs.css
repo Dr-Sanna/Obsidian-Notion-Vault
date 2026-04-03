@@ -1,0 +1,79 @@
+.obj-list .obj-row{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  margin: 4px 0;
+}
+
+.obj-list .obj-row input[type="checkbox"]{
+  margin-top: 2px;
+}
+
+.obj-list .obj-row.is-sub{
+  margin-left: 18px;
+  opacity: 0.95;
+}
+
+.obj-list .obj-link{
+  white-space: nowrap;
+  min-width: 90px;
+  text-decoration: none;
+}
+
+.obj-list .obj-link:hover{
+  text-decoration: underline;
+}
+
+.obj-list .obj-text{
+  flex: 1;
+}
+/* Curseur "pointer" sur les cases */
+.obj-list .obj-row input[type="checkbox"]{
+  cursor: pointer;
+}
+
+/* Barre le texte quand la tâche est cochée */
+.obj-list .obj-row:has(input[type="checkbox"]:checked) .obj-text{
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Optionnel: rendre le mark un peu moins “flash” quand c’est coché */
+.obj-list .obj-row:has(input[type="checkbox"]:checked) mark{
+  opacity: 0.8;
+}
+/* Force le barré sur tout ce qui est dans le texte (dont <time>) */
+.obj-list .obj-row.is-checked .obj-text,
+.obj-list .obj-row.is-checked .obj-text * {
+  text-decoration-line: line-through !important;
+}
+
+/* Optionnel: évite des comportements chelous d'underline/line-through */
+.obj-list .obj-text time,
+.obj-list .obj-text mark {
+  text-decoration: inherit;
+}
+
+/* Séparateur entre groupes (robuste même si Dataview ajoute des wrappers) */
+.obj-group{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* cas simple: plusieurs .obj-group dans le même parent */
+.obj-group:not(:first-of-type){
+  border-top: 1px solid var(--background-modifier-border);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+/* fallback si Dataview les entoure (parent = .dataview / .block-language-dataviewjs / etc.) */
+.block-language-dataviewjs .obj-group:not(:first-child),
+.dataview .obj-group:not(:first-child){
+  border-top: 1px solid var(--background-modifier-border);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+

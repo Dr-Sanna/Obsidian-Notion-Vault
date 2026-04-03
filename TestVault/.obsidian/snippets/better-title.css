@@ -1,0 +1,27 @@
+:root * {
+--spacing-banner: 1rem;
+--spacing-modifier: 6rem;
+}
+
+/* Title at top of the document */
+.markdown-reading-view .better-title .npis-inline-title-parent {
+    top: calc(var(--spacing-banner) + var(--spacing-modifier));
+    position: absolute;
+    font-size: 26pt !important;
+    font-weight: bolder;
+margin : 0;
+}
+
+.markdown-reading-view .better-title .npis-inline-title-parent > .inline-title {
+  letter-spacing: 8px !important;
+color: white !important;
+}
+
+.markdown-source-view .better-title .npis-inline-title-parent > .inline-title {
+  letter-spacing: 8px !important;
+color: white !important;
+}
+
+.markdown-preview-view.better-title .markdown-preview-sizer {
+  padding-top: var(--spacing-banner) !important;
+}
