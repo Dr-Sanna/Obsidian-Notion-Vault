@@ -1,0 +1,10 @@
+{
+  "id": "yaml-picker",
+  "name": "YAML Picker",
+  "version": "1.3.0",
+  "minAppVersion": "1.5.0",
+  "description": "Open a modal to manage cssclasses, alias, and selected YAML parameters on the active note.",
+  "author": "DrSanna",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}

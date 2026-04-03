@@ -1,0 +1,10 @@
+{
+  "id": "smart-balanced-toc",
+  "name": "Smart Balanced TOC",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Automatic TOC with 1 or 2 true columns and a configurable split level.",
+  "author": "DrSanna",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}

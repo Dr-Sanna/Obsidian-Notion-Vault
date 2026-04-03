@@ -1,0 +1,61 @@
+.yaml-picker-modal {
+  padding-bottom: 0.5rem;
+}
+
+.yaml-picker-note-path {
+  margin-top: -0.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
+.yaml-picker-section {
+  margin-bottom: 1rem;
+}
+
+.yaml-picker-section h3,
+.yaml-picker-settings-preview h3,
+.yaml-picker-settings-errors h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.yaml-picker-empty-state {
+  color: var(--text-muted);
+}
+
+.yaml-picker-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.yaml-picker-settings-textarea {
+  width: 100%;
+  min-height: 11rem;
+  font-family: var(--font-monospace);
+}
+
+.yaml-picker-settings-preview,
+.yaml-picker-settings-errors {
+  margin-top: 1rem;
+}
+
+.yaml-picker-settings-errors {
+  color: var(--text-error);
+}
+
+.yaml-picker-modal .setting-item {
+  align-items: flex-start;
+}
+
+.yaml-picker-modal .setting-item-control {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.yaml-picker-modal .setting-item-control input {
+  min-width: 14rem;
+}

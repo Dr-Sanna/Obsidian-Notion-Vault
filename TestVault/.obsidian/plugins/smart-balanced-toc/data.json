@@ -1,0 +1,14 @@
+{
+  "title": "Table des matières",
+  "minLevel": 2,
+  "maxLevel": 0,
+  "include": null,
+  "exclude": null,
+  "includeLinks": true,
+  "hideWhenEmpty": false,
+  "columns": 2,
+  "breakAt": "h3",
+  "repeatParents": false,
+  "columnGap": "1rem",
+  "debugInConsole": false
+}
